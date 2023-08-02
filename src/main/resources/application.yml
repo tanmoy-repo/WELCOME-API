@@ -1,0 +1,29 @@
+server:
+  port: 7070
+  
+spring:
+  application:
+    name: WELCOME-API
+    
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:1111/
+  zipkin:
+    discovery-client-enabled: true
+        
+eureka:
+  client:
+    service-url: 
+     defaultZone:  http://localhost:8761/eureka
+
+     
+     
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+      
